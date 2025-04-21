@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:css": "tailwindcss -i ./src/index.css -o ./dist/assets/index.css --minify",
-    "build:full": "npm run build && npm run build:css",
+    "build:css": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/assets/index.css --minify",
+    "build:full": "vite build && npm run build:css",
     "lint": "eslint .",
     "preview": "vite preview"
   },

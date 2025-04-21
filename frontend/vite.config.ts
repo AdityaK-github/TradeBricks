@@ -6,8 +6,11 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    cssMinify: true,
+    cssMinify: 'lightningcss',
+    outDir: 'dist',
+    assetsDir: 'assets',
     minify: true,
     assetsInlineLimit: 0, // Prevents inlining of assets
+    sourcemap: false,
   },
 })
