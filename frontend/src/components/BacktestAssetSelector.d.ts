@@ -1,12 +1,6 @@
 declare module './components/BacktestAssetSelector' {
     interface BacktestAssetSelectorProps {
-        onSelect: (asset: {
-            symbol: string;
-            name: string;
-            address?: string;
-            assetType?: string;
-            price?: number;
-        }) => void;
+        onSelect: (asset: any) => void;
         className?: string;
     }
 

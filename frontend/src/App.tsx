@@ -6,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import FlowEditor from "./components/editor/FlowEditor";
-import BlocksSidebar from "./components/editor/BlocksSidebar";
 import BacktestResults from "./components/backtest/BacktestResults";
 import StrategyList from "./components/editor/StrategyList";
 import StrategyGuide from "./pages/StrategyGuide";
@@ -14,6 +13,7 @@ import { BlockType } from "./components/blocks/BlockTypes";
 import { getStrategiesByUser, runBacktest } from "./services/apiService";
 import Toast from "./components/Toast";
 import DarkModeToggle from "./components/DarkModeToggle";
+// @ts-ignore
 import BacktestAssetSelector from "./components/BacktestAssetSelector";
 import "./index.css";
 
