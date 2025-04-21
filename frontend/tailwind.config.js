@@ -1,6 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{css,scss}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
+  safelist: [
+    "bg-blue-600",
+    "text-white",
+    "dark:bg-dark-accent",
+    "bg-gray-200",
+    "text-gray-700",
+    "hover:bg-gray-300",
+    "dark:bg-gray-700",
+    "dark:text-gray-200",
+    "dark:hover:bg-gray-600",
+  ],
   darkMode: "class",
   theme: {
     extend: {

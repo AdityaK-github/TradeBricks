@@ -1,0 +1,60 @@
+/* Backup styles for TradeBricks */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.dark body {
+  background-color: #1E293B;
+  color: #F8FAFC;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.bg-blue-600:hover {
+  background-color: #1d4ed8;
+}
+
+.dark .bg-dark-accent {
+  background-color: #3B82F6;
+}
+
+.bg-gray-200 {
+  background-color: #e5e7eb;
+}
+
+.bg-gray-200:hover {
+  background-color: #d1d5db;
+}
+
+.text-gray-700 {
+  color: #374151;
+}
+
+.dark .bg-gray-700 {
+  background-color: #374151;
+}
+
+.dark .text-gray-200 {
+  color: #e5e7eb;
+}
+
+.dark .bg-gray-700:hover {
+  background-color: #4b5563;
+} 

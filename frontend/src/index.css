@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add some basic custom styles to ensure CSS is working */
+body {
+  @apply bg-gray-100 dark:bg-dark-primary;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-dark-accent;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600;
+}
