@@ -65,7 +65,7 @@ TradeBricks is a powerful yet intuitive low-code platform that democratizes algo
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/TradeBricks.git
+git clone https://github.com/AdityaK-github/TradeBricks.git
 cd TradeBricks
 
 # Install backend dependencies
