@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "build:css": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/assets/index.css --minify",
-    "build:full": "vite build && npm run build:css",
+    "build:render": "vite build && TAILWIND_MODE=build npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/assets/index.css --minify && cp public/styles.css dist/styles.css",
+    "build:full": "vite build && NODE_ENV=production npm run build:css && cp public/styles.css dist/styles.css",
+    "tailwind:debug": "node tailwind-debug.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
