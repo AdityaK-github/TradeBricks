@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000/api'; // Backend API URL on port 3000
+const API_BASE_URL = 'https://tradebricks.onrender.com/api'; // Deployed backend API URL
 
 // Create axios instance with interceptors
 const apiClient = axios.create({
