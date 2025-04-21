@@ -1,0 +1,12 @@
+// Test file to confirm ES modules are working
+import express from "express";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(3000, () => {
+  console.log("Test server running on port 3000");
+});
