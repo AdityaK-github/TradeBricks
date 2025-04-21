@@ -265,5 +265,5 @@ TradeBricks is released under the MIT License. See the [LICENSE](LICENSE) file f
 
 <div align="center">
   <p>Built with ❤️ by the AlgoManiacs Team</p>
-  <p>© 2023 TradeBricks - Democratizing Algorithmic Trading</p>
+  <p> TradeBricks - Democratizing Algorithmic Trading</p>
 </div>
