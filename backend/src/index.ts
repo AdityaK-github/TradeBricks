@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
     origin: process.env.NODE_ENV === 'production'
-        ? ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://tradebricks-frontend.onrender.com', 'https://tradebricks-static.onrender.com', 'https://tradebricks.onrender.com']
+        ? ['http://localhost:5173', 'http://127.0.0.1:5173', 'https://tradebricks-1.onrender.com/editor, 'https://tradebricks-static.onrender.com', 'https://tradebricks.onrender.com']
         : '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
