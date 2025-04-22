@@ -9,5 +9,17 @@ services:
         value: production
     routes:
       - type: rewrite
+        source: /strategy-guide
+        destination: /index.html
+      - type: rewrite
+        source: /editor
+        destination: /index.html
+      - type: rewrite
+        source: /editor/.*
+        destination: /index.html
+      - type: rewrite
+        source: /strategy-guide/.*
+        destination: /index.html
+      - type: rewrite
         source: /*
         destination: /index.html

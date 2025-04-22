@@ -1,0 +1,16 @@
+{
+    "rules": [
+        {
+            "pathname": "/editor",
+            "dest": "/index.html"
+        },
+        {
+            "pathname": "/strategy-guide",
+            "dest": "/index.html"
+        },
+        {
+            "pathname": "/**",
+            "dest": "/index.html"
+        }
+    ]
+}

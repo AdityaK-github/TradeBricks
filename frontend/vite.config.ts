@@ -14,4 +14,12 @@ export default defineConfig({
     sourcemap: false,
     emptyOutDir: true,
   },
+  preview: {
+    port: 5173,
+    strictPort: true,
+    host: true,
+    headers: {
+      'Cache-Control': 'no-store'
+    }
+  }
 })
