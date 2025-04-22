@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/tradebricks-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TradeBricks - Strategy Building Guide</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      /* Additional styles if needed */
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f3f4f6;
+      }
+      a.button {
+        display: inline-block;
+        padding: 12px 20px;
+        background-color: #2563eb;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        transition: background-color 0.2s;
+      }
+      a.button:hover {
+        background-color: #1d4ed8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mx-auto py-8 px-4 max-w-4xl">
+      <h1 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
+        TradeBricks Strategy Building Guide
+      </h1>
+
+      <div
+        class="bg-white shadow-md rounded-lg p-6 mb-8 dark:bg-gray-800 dark:text-gray-200"
+      >
+        <h2
+          class="text-2xl font-semibold mb-4 text-blue-600 dark:text-blue-400"
+        >
+          Introduction
+        </h2>
+        <p class="mb-4">
+          Trading strategies in TradeBricks work by connecting different blocks
+          in a logical flow. Each block performs a specific function, and when
+          connected properly, they create a complete trading system that can be
+          backtested with historical data.
+        </p>
+        <p class="mb-4">
+          For a strategy to work correctly, it needs to have a logical flow from
+          data sources through analysis and signal generation to order
+          execution.
+        </p>
+      </div>
+
+      <div
+        class="bg-white shadow-md rounded-lg p-6 mb-8 dark:bg-gray-800 dark:text-gray-200"
+      >
+        <h2
+          class="text-2xl font-semibold mb-4 text-blue-600 dark:text-blue-400"
+        >
+          Essential Strategy Components
+        </h2>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-medium mb-2 text-gray-700 dark:text-gray-300">
+            1. Data Source Blocks
+          </h3>
+          <p class="mb-2 pl-4 border-l-4 border-blue-500">
+            Every strategy must start with a data source block. This provides
+            the price and volume data needed for your strategy.
+          </p>
+          <div
+            class="bg-gray-100 p-3 rounded-md text-sm dark:bg-gray-700 dark:text-gray-300"
+          >
+            <strong>Example:</strong> The Market Data block fetches price and
+            volume data for a specified symbol (like AAPL, BTC, etc.).
+          </div>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <strong>Outputs:</strong> price, volume (connects to technical
+            indicators, conditions, etc.)
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-medium mb-2 text-gray-700 dark:text-gray-300">
+            2. Technical Indicator Blocks
+          </h3>
+          <p class="mb-2 pl-4 border-l-4 border-green-500">
+            These blocks calculate technical indicators based on price or volume
+            data.
+          </p>
+          <div
+            class="bg-gray-100 p-3 rounded-md text-sm dark:bg-gray-700 dark:text-gray-300"
+          >
+            <strong>Examples:</strong>
+            <ul class="list-disc list-inside mt-1">
+              <li>
+                Moving Average (MA) - calculates average price over a specified
+                period
+              </li>
+              <li>
+                RSI - measures momentum and overbought/oversold conditions
+              </li>
+            </ul>
+          </div>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <strong>Inputs:</strong> price or volume (from data source)
+            <br />
+            <strong>Outputs:</strong> indicator values (connects to comparison
+            blocks)
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-medium mb-2 text-gray-700 dark:text-gray-300">
+            3. Condition Blocks
+          </h3>
+          <p class="mb-2 pl-4 border-l-4 border-yellow-500">
+            These blocks compare values to create logical conditions for trading
+            decisions.
+          </p>
+          <div
+            class="bg-gray-100 p-3 rounded-md text-sm dark:bg-gray-700 dark:text-gray-300"
+          >
+            <strong>Example:</strong> A Comparison block might check if a fast
+            MA is greater than a slow MA.
+          </div>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <strong>Inputs:</strong> values to compare (from indicators or data)
+            <br />
+            <strong>Outputs:</strong> boolean result (connects to signal blocks)
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-medium mb-2 text-gray-700 dark:text-gray-300">
+            4. Signal Blocks
+          </h3>
+          <p class="mb-2 pl-4 border-l-4 border-purple-500">
+            These blocks generate buy or sell signals based on conditions.
+          </p>
+          <div
+            class="bg-gray-100 p-3 rounded-md text-sm dark:bg-gray-700 dark:text-gray-300"
+          >
+            <strong>Example:</strong> A Trade Signal block generates a BUY
+            signal when its input condition is true.
+          </div>
+          <div class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            <strong>Inputs:</strong> condition (from comparison blocks)
+            <br />
+            <strong>Outputs:</strong> trading signal (connects to order
+            execution or risk management)
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-white shadow-md rounded-lg p-6 mb-8 dark:bg-gray-800 dark:text-gray-200"
+      >
+        <h2
+          class="text-2xl font-semibold mb-4 text-blue-600 dark:text-blue-400"
+        >
+          Building a Logical Flow
+        </h2>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-medium mb-2 text-gray-700 dark:text-gray-300">
+            Correct Connection Order
+          </h3>
+          <p class="mb-4">
+            For a strategy to produce accurate results, blocks should be
+            connected in a logical order:
+          </p>
+          <ol class="list-decimal list-inside mb-4 space-y-2">
+            <li>
+              Start with a
+              <strong class="text-blue-600 dark:text-blue-400">
+                Data Source
+              </strong>
+              block
+            </li>
+            <li>
+              Connect to
+              <strong class="text-green-600 dark:text-green-400">
+                Technical Indicators
+              </strong>
+              for analysis
+            </li>
+            <li>
+              Feed the indicators into
+              <strong class="text-yellow-600 dark:text-yellow-400">
+                Condition
+              </strong>
+              blocks to create trading rules
+            </li>
+            <li>
+              Connect conditions to
+              <strong class="text-purple-600 dark:text-purple-400">
+                Signal
+              </strong>
+              blocks
+            </li>
+            <li>
+              Add
+              <strong class="text-orange-600 dark:text-orange-400">
+                Risk Management
+              </strong>
+              blocks to protect your capital
+            </li>
+            <li>
+              End with
+              <strong class="text-red-600 dark:text-red-400">
+                Order Execution
+              </strong>
+              blocks to execute trades
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 mb-12">
+        <a href="/editor" class="button"> Return to Strategy Editor </a>
+      </div>
+    </div>
+  </body>
+</html>
