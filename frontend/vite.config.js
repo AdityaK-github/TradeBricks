@@ -6,4 +6,16 @@ export default defineConfig({
   plugins: [react()],
   // Let Vite handle PostCSS configuration automatically
   // No need to explicitly require tailwindcss and autoprefixer here
+
+  // Add history API fallback for SPA routing
+  server: {
+    historyApiFallback: true,
+  },
+
+  // Ensure that build generates the correct assets path
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    emptyOutDir: true,
+  },
 });
