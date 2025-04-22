@@ -19,7 +19,7 @@ apiClient.interceptors.response.use(
         if (!error.response) {
             console.error('Network error:', error.message);
             return Promise.reject({
-                message: 'Cannot connect to the server. Please check your internet connection or try again later.',
+                message: 'Cannot connect to the server. Wait for the server to start (about 1 min), then retry',
                 originalError: error
             });
         }
