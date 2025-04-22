@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:css": "npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./dist/assets/index.css --minify",
-    "build:render": "TAILWIND_MODE=build npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./public/styles.css --minify && vite build && cp public/styles.css dist/styles.css && cp public/_redirects dist/ && cp public/200.html dist/ && cp public/_routes.json dist/ && cp public/vercel.json dist/ && cp public/serve.json dist/ && cp public/static.json dist/ && cp public/rewrite-rules.json dist/ && echo '/* /index.html 200' > dist/_redirects",
+    "build:render": "TAILWIND_MODE=build npx tailwindcss -c ./tailwind.config.js -i ./src/index.css -o ./public/styles.css --minify && vite build && cp public/styles.css dist/styles.css && cp public/_redirects dist/ && cp public/200.html dist/ && cp public/_routes.json dist/ && cp public/vercel.json dist/ && cp public/serve.json dist/ && cp public/static.json dist/ && cp public/rewrite-rules.json dist/ && cp public/.htaccess dist/ && cp public/web.config dist/ && echo '/* /index.html 200' > dist/_redirects",
     "build:full": "vite build && NODE_ENV=production npm run build:css && cp public/styles.css dist/styles.css",
     "tailwind:debug": "node tailwind-debug.js",
     "lint": "eslint .",
