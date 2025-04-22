@@ -12,5 +12,6 @@ export default defineConfig({
     minify: true,
     assetsInlineLimit: 0, // Prevents inlining of assets
     sourcemap: false,
+    emptyOutDir: true,
   },
 })
